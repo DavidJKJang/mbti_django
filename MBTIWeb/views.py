@@ -7,10 +7,11 @@ class Index(View):
 	def get(request, **webUrl):
 		if not webUrl:
 			context = {}
-			template = ''
+			template = 'index.html'
 
 		else:
 			context = {}
-			template = ''
+			print(webUrl['webUrl'])
+			template = 'index.html'
 
-		return render(template, context)
+		return render(request, template, context)
